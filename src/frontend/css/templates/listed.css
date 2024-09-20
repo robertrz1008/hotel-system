@@ -1,0 +1,94 @@
+.listed-form-con{
+    width: 90%;
+    background: white;
+    box-shadow: 0 0 2px grey;
+    padding: 10px;
+    border-radius: 3px;
+}
+.listed-form-con h4{
+    margin-top: 5px;
+    color: rgb(51, 50, 50);
+    font-family: Helvetica;
+}
+.form-rango-con{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(168, 167, 167);
+    padding: 7px;
+    margin-top: 5px;
+}
+.formdb-rango-con{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.form-rangosub-con{
+    width: 280px;
+}
+.form-select-con{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    margin-bottom: 5px;
+}
+.lidted-form-select-div{
+    width: 48%;
+}
+.lidted-form-select-div select{
+    width: 100%;
+}
+.listed1-btn-con{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.listed-btn-con{
+    width: 70%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-self: center;
+}
+.report-con{
+    width: 500px;
+}
+
+.report-stay-con{
+    width: 780px;
+}
+.report-con-title{
+    color: rgb(53, 40, 40);
+    font-family: Helvetica;
+    margin-bottom: 5px;
+}
+.report-table-con{
+    width: 100%;
+    height: 400px;
+    max-height: 400px;
+    border: 1px solid grey;
+    overflow-y: auto;
+  }
+  /* tabla del detalle */
+  .report-table-con table{
+    position: relative;
+    bottom: 10px;
+  }
+  .report-table-con table thead{ 
+    position: sticky;
+    top: 0;
+  }
+  .param-div{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .param2-con{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }

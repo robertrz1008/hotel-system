@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+}
+
+body{
+  width: 99%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 100%;
+  font-family: sans-serif;
+}
+
+.sidebar{
+  background-color: #0e1622;
+  color: #e4e9f7;
+}
+.sidebar .logo{
+    height: 60px;
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sidebar .logo i{
+  font-size: 25px;
+  color: #fff;
+}
+.sidebar-line{
+  width: 90%;
+  border-bottom: 1px solid rgb(68, 66, 66);
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar .nav-list{
+  width: 100%;
+  padding-left: 1px;
+}
+
+/* inicio */
+.tr-home:hover{
+  background-color: #283952;
+}
+.sidebar .nav-list li .home-link  {
+  width: 90%;
+  height: 32px;
+  display: flex;
+  padding-left: 5px;
+  align-items: center;
+  padding-bottom: 10px;
+  color: #b9bdc7;
+  text-decoration: none;
+}
+
+.sidebar .nav-list li .home-link i{
+  font-size: 22px;
+}
+
+.sidebar .nav-list li .home-link h4{
+  margin-left: 10px;
+} 
+
+/* transacciones */
+.sidebar .nav-list .nav-link-transaccion{
+  width: 100%;
+}
+.sidebar .nav-list li {
+  width: 100%;
+  list-style: none;
+  border-radius: 5px;
+  transition: all .500ms ease;
+  padding-left: 5px;
+}
+
+.sidebar .nav-list li .icon-link  {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sidebar .nav-list li div{
+  display: flex;
+  width: 80%;
+  height: 32px;
+  text-decoration: none;
+  align-items: center;
+  font-weight: lighter;
+  color: #b9bdc7;
+  padding-right: 10px;
+}
+.sidebar .nav-list li:hover div{
+  background-color: #283952;
+}
+
+.sidebar .nav-list li div:hover{
+  background-color: #283952;
+}
+
+.sidebar .nav-list li div i{
+  font-size: 21px;
+  margin-right: 14px;
+}
+.sidebar .nav-list li div h4{
+  font-family: sans-serif;
+  font-size: 1.0em;
+  font-weight: lighter;
+}
+.arrow{
+  transition: all .1s ease;
+}
+.sidebar .nav-list .nav-link-transaccion li.show .icon-link .arrow{
+  transform: rotate(-90deg);
+}
+
+/* submenu */
+.sidebar .nav-list li .sub-menu{
+  display: none;
+}
+
+.sidebar .nav-list li.show .sub-menu{
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  transition: all .1s ease;
+}
+.sidebar .nav-list li.show .sub-menu li a{
+    text-decoration: none;
+    color: #b9bdc7;
+    font-weight: bolder;
+}
+
+.sidebar .nav-list li.show .sub-menu li a:hover{
+  color: #fff;
+}
+
+.sidebar .nav-list li .sub-menu.show li{
+  margin-top: 5px;
+}
+.root{
+  background-color: #e4e9f7;
+}
+
+.tr-selected{
+  background-color: #304463;
+}
+/* off */
+
+.tr-off{
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}

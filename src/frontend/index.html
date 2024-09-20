@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoomSys</title>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="../lib/fontawesome-free-6.5.1-web/css/all.css">
+
+    <!-- css native -->
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/templates/clientTemplate.css"> 
+    <link rel="stylesheet" href="./css/templates/process.css">
+    <link rel="stylesheet" href="./css/templates/homeView.css"> 
+    <link rel="stylesheet" href="./css/templates/listed.css">
+    <link rel="stylesheet" href="./css/root.css">
+
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <h2>Sistema</h2>
+        </div>
+        <div class="sidebar-line"></div>
+
+        <ul class="nav-list">
+            <!-- Inicio -->
+            <li class="tr-home">
+                <a class="home-link" href="#/home">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <h4>Inicio</h4>
+                </a>
+            </li>
+
+            <div class="nav-link-transaccion">
+
+                <!-- proceso -->
+                <li class="tr">
+                    <div class="icon-link">
+                        <div>
+                            <i class="fa fa-cube" aria-hidden="true"></i>
+                            <h4>Proceso</h4>
+                        </div>
+                        <i class="fas fa-caret-down arrow"></i>
+                    </div>
+                    <!-- submenu -->
+                    <ul class="sub-menu">
+                        <li><a href="#/stayProcess" class="link-name">Estadias</a></li>
+                      </ul>
+                </li class="tr">
+
+                <!-- Tablas -->
+                <li class="tr">
+                    <div class="icon-link">
+                        <div>
+                            <i class="fa fa-table" aria-hidden="true"></i>
+                            <h4>Registros</h4>
+                        </div>
+                        <i class="fas fa-caret-down arrow"></i>
+                    </div>
+    
+                    <ul class="sub-menu ">
+                        <li><a href="#/clientsTable" class="link-name">Clientes</a></li>
+                        <li><a href="#/servicesTable">Consumisiones</a></li>
+                        <li><a href="#/roomsTable">Habitacion</a></li>
+                      </ul>
+                </li>
+                <li class="tr">
+                    <div class="icon-link">
+                        <div>
+                            <i class="fa fa-database" aria-hidden="true"></i>    
+                            <h4>Listados</h4>
+                        </div>
+                        <i class="fas fa-caret-down arrow"></i>
+                    </div>
+                    <!-- submenu -->
+                    <ul class="sub-menu close">
+                        <li><a href="#/clientsListed">Listado de clientes</a></li>
+                        <li><a href="#/servicesListed">Listado de consumiciôn</a></li> 
+                        <li><a href="#/roomsListed">Listado de habitaciones</a></li>
+                      </ul>
+                </li id="tr">
+
+                <!-- Informes -->
+                <li class="tr">
+                    <div class="icon-link">
+                        <div>
+                            <i class="fa fa-list-alt" aria-hidden="true"></i>    
+                            <h4>Informes</h4>
+                        </div>
+                        <i class="fas fa-caret-down arrow"></i>
+                    </div>
+                    <!-- submenu -->
+                    <ul class="sub-menu close">
+                        <li><a href="#/staysReport">Informe de estadias</a></li>
+                      </ul>
+                </li id="tr">
+
+                <!-- utilidades --> 
+                <li class="tr">
+                    <div class="icon-link">
+                        <div>
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <h4>Sistema</h4>
+                        </div>
+                        <i class="fas fa-caret-down arrow"></i>
+                    </div>
+
+                    <ul class="sub-menu">
+                        <li><a href="#/datesInit" class="link-name">Inicializacion de DB</a></li>
+                        <li><a href="#/settings" class="link-name">Configuraciones</a></li>
+                    </ul>
+                </li>
+
+               
+            </div>
+        </ul>        
+        <section class="operations">
+
+        </section>
+        <section class="options">
+        </section>
+    </nav>
+
+    <main id="root">
+    </main>
+
+    <script src="./Components/Sidebar.js"></script>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

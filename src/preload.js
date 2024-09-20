@@ -1,0 +1,58 @@
+const { contextBridge, ipcRenderer, ipcMain } = require('electron')
+
+contextBridge.exposeInMainWorld('ipcApi', {
+  node: () => process.ipcApi.node,
+  chrome: () => process.ipcApi.chrome,
+  electron: () => process.ipcApi.electron,
+  //crud
+  getClients: () => ipcRenderer.invoke("getClients"),
+  getClientByFilter: (filter) => ipcRenderer.invoke("getClientsByFilter", filter),
+  createClient: (client) => ipcRenderer.invoke("createClient", client),
+  deleteClient: (id) => ipcRenderer.invoke("deleteClient", id),
+  updateClient: (area) => ipcRenderer.invoke("updateClient", area),
+  verifyCedula: (cedula) => ipcRenderer.invoke("verifyCedula", cedula),
+  verifyTelephone: (telefono) => ipcRenderer.invoke("verifyTelephone", telefono),
+  clientsListed: (filter) => ipcRenderer.invoke("clientsListed", (filter)),
+
+  getServices: () => ipcRenderer.invoke("getServices"),
+  getServicesbyFilter: (filter) => ipcRenderer.invoke("getServicesByFilter", filter),
+  createService: (service) => ipcRenderer.invoke("createService", service),
+  deleteService: (id) => ipcRenderer.invoke("deleteService", id),
+  updateService: (service) => ipcRenderer.invoke("updateService", service),
+  servicesListed: (filter) => ipcRenderer.invoke("servicesListed", (filter)),
+
+  getRooms: () => ipcRenderer.invoke("getRooms"),
+  getRoomsByFilter: (filter) => ipcRenderer.invoke("getRoomsByFilter", filter),
+  createRoom: (room) => ipcRenderer.invoke("createRoom", room),
+  deleteRoom: (id) => ipcRenderer.invoke("deleteRoom", id),
+  updateRoom: (room) => ipcRenderer.invoke("updateRoom", room),
+  changeRoomState: (state) => ipcRenderer.invoke("changeRoomState", state),
+  roomsListed: (filter) => ipcRenderer.invoke("roomsListed", (filter)),
+
+  createStay: (stay, state) => ipcRenderer.invoke("createStay", stay, state),
+  updateStay: (stay) => ipcRenderer.invoke("updateStay", stay),
+  setStayFinalized: (stay) => ipcRenderer.invoke("setStayFinalized", stay),
+  getStays: () => ipcRenderer.invoke("getStays"),
+  createDetail: (detail) => ipcRenderer.invoke("createDetail", detail),
+  getDetailsByStay: (stayId) => ipcRenderer.invoke("getDetailsByStay", stayId),
+  deleteDetail: (id) => ipcRenderer.invoke("deleteDetail", id),
+  updateAmountDetail: (detail) => ipcRenderer.invoke("updateAmountDetail", detail),
+  getProcess: () => ipcRenderer.invoke("getProcess"),
+  getProcessByStatus: (status) => ipcRenderer.invoke("getProcessByStatus", (status)),
+  getProcessByFilter: (filter) => ipcRenderer.invoke("getProcessByFilter", (filter)),
+  staysListed: (filter) => ipcRenderer.invoke("staysListed", (filter)),
+  staysDetailedListed: (filter) => ipcRenderer.invoke("staysDetailedListed", (filter)),
+  updateDateStayReserved: (stay) => ipcRenderer.invoke("updateDateStayReserved", stay),
+
+  createCredential: ( credential) =>  ipcRenderer.invoke("createCredential", credential),
+  getCredential: () =>  ipcRenderer.invoke("getCredential"),
+  updateCredential: ( credential) =>  ipcRenderer.invoke("updateCredential", credential),
+  clearDB: () =>  ipcRenderer.invoke("clearDB"),
+  
+  clientReport: (credential, clients) =>  ipcRenderer.invoke("clientReport", credential, clients),
+  roomsReport: (credential, clients) =>  ipcRenderer.invoke("roomsReport", credential, clients),
+  servicesReport: (credential, clients) =>  ipcRenderer.invoke("servicesReport", credential, clients),
+  staysDetailedReport: (credential, stays) =>  ipcRenderer.invoke("staysDetailedReport", credential, stays),
+  staysSummarizedReport: (credential, stays) =>  ipcRenderer.invoke("staysSummarizedReport", credential, stays),
+  detailservicesReport: ( credential, stay, detailServices) =>  ipcRenderer.invoke("detailservicesReport", credential, stay,detailServices),
+})

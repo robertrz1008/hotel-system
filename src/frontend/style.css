@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+  }
+/*   
+  body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    background-color: #f5f5e1;
+    grid-template-columns: 130px 1fr;
+    grid-template-rows: 100vh;
+    font-family: sans-serif;
+    font-weight: lighter;
+
+  } */
+  nav{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(24, 24, 49);
+  }
+  ul{
+    margin-top: 30px;
+    width: 70%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  a{
+    text-decoration: none;
+    color: rgb(128, 138, 138);
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: lighter;
+    transition-property: all;
+    transition-duration: 200ms;
+  }
+  a:hover{
+    color: white;
+  }
+
+  /* main */
+  main{
+    width: 90%;
+    height: 100%;
+    background-color: #e4e9f7;
+  }
+
+.product-tem-con{
+  width: 100%;
+  height: 100%;
+  /* overflow-y: scroll; */
+}
+
+.list-con{
+  width: 95%;
+  padding: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 3px grey;
+  margin: auto;
+}
+
+
+
+.t-btn{
+  width: 52px;
+  height: 26px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 200ms;
+  padding: 3px 3px;
+}
+
+.t-btn-del{
+  background-color: red;
+}
+
+.t-btn-del:hover{
+  background-color: rgb(236, 45, 45);
+}
+
+.t-btn-upd{
+  background-color: green;
+  margin-left: 10px;
+}
+.t-btn-upd:hover{
+  background-color: rgb(55, 163, 55);
+}
